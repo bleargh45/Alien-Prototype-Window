@@ -1,0 +1,40 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Alien::Prototype::Window;
+
+my $dir = shift || './prototype-window';
+print "Installing Prototype Window Class to $dir\n";
+Alien::Prototype::Window->install( $dir );
+print "... done\n";
+
+
+=head1 NAME
+
+prototype-window-install - Prototype Window Class installation
+
+=head1 SYNOPSIS
+
+  prototype-window-install destdir
+
+=head1 DESCRIPTION
+
+Installs the Prototype Window Class (including all CSS themes and images) into
+the specified F<destdir>, using C<Alien::Prototype::Window>.
+
+=head1 AUTHOR
+
+Graham TerMarsch (cpan@howlingfrog.com)
+
+=head1 LICENSE
+
+Copyright (C) 2007, Graham TerMarsch.  All rights reserved.
+
+This is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+
+=head1 SEE ALSO
+
+L<Alien::Prototype::Window>.
+
+=cut
