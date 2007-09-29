@@ -1,6 +1,8 @@
 package Alien::Prototype::Window;
 
+###############################################################################
 # Required inclusions.
+###############################################################################
 use strict;
 use warnings;
 use Carp;
@@ -9,22 +11,42 @@ use File::Path qw(mkpath);
 use File::Find qw(find);
 use File::Basename qw(dirname);
 
+###############################################################################
 # Version number
-our $VERSION = '1.3';
+###############################################################################
+our $PWC_VERSION = '1.3';
+our $VERSION = '1.3.1';
 
+###############################################################################
+# Subroutine:   version()
+###############################################################################
 # Return the Prototype Window Class version number.
+#
+# Not to be confused with the 'Alien::Prototype::Window' version number (which
+# is the version number of the Perl wrapper).
+###############################################################################
 sub version {
-    return $VERSION;
+    return $PWC_VERSION;
 }
 
+###############################################################################
+# Subroutine:   path()
+###############################################################################
 # Returns the path to the available copy of Prototype Window Class.
+###############################################################################
 sub path {
     my $base = $INC{'Alien/Prototype/Window.pm'};
     $base =~ s{\.pm$}{};
     return $base;
 }
 
-# Installs the Prototype Window Class into the given '$destdir'.
+###############################################################################
+# Subroutine:   install($destdir)
+# Parameters:   $destdir    - Destination directory
+###############################################################################
+# Installs the Prototype Window Class into the given '$destdir'.  Throws a
+# fatal exception on errors.
+###############################################################################
 sub install {
     my ($class, $destdir) = @_;
     if (!-d $destdir) {
@@ -76,6 +98,28 @@ Alien::Prototype::Window - installing and finding Prototype Window Class
 =head1 DESCRIPTION
 
 Please see L<Alien> for the manifesto of the Alien namespace.
+
+=head1 METHODS
+
+=over
+
+=item version()
+
+Return the Prototype Window Class version number. 
+
+Not to be confused with the C<Alien::Prototype::Window> version number
+(which is the version number of the Perl wrapper). 
+
+=item path()
+
+Returns the path to the available copy of Prototype Window Class. 
+
+=item install($destdir)
+
+Installs the Prototype Window Class into the given C<$destdir>. Throws a
+fatal exception on errors. 
+
+=back
 
 =head1 AUTHOR
 

@@ -1,6 +1,6 @@
 ---
 name: Alien-Prototype-Window
-version: 1.3
+version: 1.3.1
 author:
   - Graham TerMarsch (cpan@howlingfrog.com)
 abstract: installing and finding Prototype Window Class
@@ -13,7 +13,7 @@ build_requires:
 provides:
   Alien::Prototype::Window:
     file: lib/Alien/Prototype/Window.pm
-    version: 1.3
+    version: 1.3.1
 generated_by: Module::Build version 0.2805
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
