@@ -9,6 +9,7 @@ MY::Build->new(
     'dist_author'       => 'Graham TerMarsch (cpan@howlingfrog.com)',
     'requires'          => {
         'perl'                  => '5.6.0',
+        'Alien::scriptaculous'  => '1.7.1.1_03',
         },
     'build_requires'    => {
         'Archive::Zip'          => 0,
