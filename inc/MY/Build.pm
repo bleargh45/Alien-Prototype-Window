@@ -3,7 +3,6 @@ package MY::Build;
 use strict;
 use warnings;
 use base qw(Module::Build);
-use Archive::Zip qw(:ERROR_CODES);
 
 sub ACTION_code {
     my $self = shift;
@@ -43,14 +42,15 @@ sub install_pwc {
     my $self = shift;
     return if (-d $self->pwc_target_dir());
 
+    require Archive::Zip;
     print "Installing Prototype Window Class...\n";
     my $zip = Archive::Zip->new();
-    unless ($zip->read($self->pwc_archive()) == AZ_OK) {
+    unless ($zip->read($self->pwc_archive()) == Archive::Zip::AZ_OK()) {
         die "unable to open PWC zip archive\n";
     }
     my $src = $self->pwc_dir();
     my $dst = $self->pwc_target_dir();
-    unless ($zip->extractTree($src,$dst) == AZ_OK) {
+    unless ($zip->extractTree($src,$dst) == Archive::Zip::AZ_OK()) {
         die "unable to extract PWC zip archive\n";
     }
 }

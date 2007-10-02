@@ -3,6 +3,8 @@ Revision history for Perl extension Alien::Prototype::Window.
     - added POD coverage tests
     - now depends on Alien::scriptaculous, instead of using the version that
       came bundled with PWC.
+    - fix dependency on Archive::Zip; its a -build- dependency, not a
+      -configuration- dependency
 
 1.3.1   Sun Sep 30 13:28 PDT 2007
     - added POD docs to Alien::Prototype::Window
