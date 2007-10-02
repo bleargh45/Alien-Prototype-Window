@@ -4,7 +4,6 @@ use strict;
 use warnings;
 use base qw(Module::Build);
 use Archive::Zip qw(:ERROR_CODES);
-use Alien::Prototype::Window;
 
 sub ACTION_code {
     my $self = shift;
@@ -14,11 +13,11 @@ sub ACTION_code {
 }
 
 sub pwc_archive {
-    return join( '', 'windows_js_', Alien::Prototype::Window->version(), '.zip' );
+    return 'windows_js_1.3.zip';
 }
 
 sub pwc_dir {
-    return join( '', 'windows_js_', Alien::Prototype::Window->version() );
+    return 'windows_js_1.3';
 }
 
 sub pwc_target_dir {
