@@ -13,6 +13,10 @@ To install:
     ./Build test
     ./Build install
 
+NOTE: You -MUST- have Module::Build present to install this module; the
+fallback methods provided by CPANPLUS and Module::Build::Compat are
+insufficient.
+
 If fetching the Prototype Window Class distribution fails, placing a manually
 downloaded copy of the archive inside the build directory will allow your build
 to proceed.
