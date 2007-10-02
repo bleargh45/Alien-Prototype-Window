@@ -67,8 +67,7 @@ sub to_blib {
         sub {
             -f $_ && do {
                 my $dstdir = $File::Find::dir;
-                $dstdir =~ s{^$themedir}{};
-                $dstdir =~ s{^/}{};
+                $dstdir =~ s{^$themedir/?}{};
                 $blib{$File::Find::name} = File::Spec->catfile('window', $dstdir, $_);
             }
         },
