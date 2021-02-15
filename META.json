@@ -35,7 +35,7 @@
    "provides" : {
       "Alien::Prototype::Window" : {
          "file" : "lib/Alien/Prototype/Window.pm",
-         "version" : "v1.3.3"
+         "version" : "v1.3.4"
       }
    },
    "release_status" : "stable",
@@ -44,7 +44,7 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "v1.3.3",
+   "version" : "v1.3.4",
    "x_bugtracker" : {
       "web" : "https://github.com/bleargh45/Alien-Prototype-Window/issues"
    },
