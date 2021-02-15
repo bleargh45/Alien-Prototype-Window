@@ -45,6 +45,14 @@
       ]
    },
    "version" : "v1.3.3",
+   "x_bugtracker" : {
+      "web" : "https://github.com/bleargh45/Alien-Prototype-Window/issues"
+   },
    "x_deprecated" : 1,
+   "x_repository" : {
+      "type" : "git",
+      "url" : "git://github.com/bleargh45/Alien-Prototype-Window.git",
+      "web" : "https://github.com/bleargh45/Alien-Prototype-Window"
+   },
    "x_serialization_backend" : "JSON::PP version 4.05"
 }
